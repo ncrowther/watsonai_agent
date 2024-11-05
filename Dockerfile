@@ -1,4 +1,4 @@
 FROM nginx:alpine
-COPY ../public /usr/share/nginx/html
+COPY ./src/html /usr/share/nginx/html
 
 EXPOSE 8080
