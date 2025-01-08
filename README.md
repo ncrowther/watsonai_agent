@@ -36,7 +36,7 @@ This project leverages the mega-awesome [swagger-tools](https://github.com/apige
 
     ibmcloud ce project select -n [PROJECT_NAME]
 
-5.	Start Docker Desktop5.	Start Rancher or Docker Desktop
+5.	Start Rancher or Docker Desktop
 
     docker login -u ncrowthe 
 
