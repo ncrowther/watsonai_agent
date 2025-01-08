@@ -1,61 +1,18 @@
+'use strict';
 var request = require('request');
-var questionParser = require('../utils/questionParser.js');
-/**
- * Get bearer token 
- *
- * returns Bearer Token given API Key
- **/
-exports.getBearer = function (req, apiKey) {
-
-  return new Promise(function (resolve, reject) {
-
-    console.log("***getBearer");
-
-    //var requestJson = req.headers.authorization;
-    //console.log('*** Auth: ', requestJson);
-
-    console.log('*** ApiKey: ', apiKey);
-
-    var options = {
-      'method': 'POST',
-      'url': 'https://iam.cloud.ibm.com/identity/token',
-      'headers': {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      form: {
-        'grant_type': 'urn:ibm:params:oauth:grant-type:apikey',
-        'apikey': apiKey
-      }
-    };
-
-    request(options, function (error, response) {
-      if (error) throw new Error(error);
-
-      var responseJson = JSON.parse(response.body);
-      console.log(responseJson);
-
-      var accessToken = responseJson.access_token;
-
-      console.log("Token: " + accessToken);
-
-      resolve(accessToken);
-
-    });
-
-  });
-}
 
 /**
- * Generate MarketGen email
- * Generate MarketGen email into tokens
+ * watson AI Service
+ * watsonAI Service
  *
- * body Request MarketGen prompt
+ * body Request watsonAiAgent AI prompt
  * projectId String Project Identifier for classification
  * apiKey String Api Key
+ * min_new_tokens Integer min length of generated text (optional)
+ * max_new_tokens Integer max length of generated text (optional)
  * returns Response
  **/
-
-exports.generateEmail = function (body, projectId, token, min_new_tokens, max_new_tokens) {
+exports.generateContent = function (body, projectId, token, min_new_tokens, max_new_tokens) {
 
   return new Promise(function (resolve, reject) {
 
@@ -157,4 +114,51 @@ exports.generateEmail = function (body, projectId, token, min_new_tokens, max_ne
     });
 
   })
+}
+
+
+
+/**
+ * Get bearer token 
+ *
+ * returns Bearer Token given API Key
+ **/
+exports.getBearer = function (req, apiKey) {
+
+  return new Promise(function (resolve, reject) {
+
+    console.log("***getBearer");
+
+    //var requestJson = req.headers.authorization;
+    //console.log('*** Auth: ', requestJson);
+
+    console.log('*** ApiKey: ', apiKey);
+
+    var options = {
+      'method': 'POST',
+      'url': 'https://iam.cloud.ibm.com/identity/token',
+      'headers': {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      form: {
+        'grant_type': 'urn:ibm:params:oauth:grant-type:apikey',
+        'apikey': apiKey
+      }
+    };
+
+    request(options, function (error, response) {
+      if (error) throw new Error(error);
+
+      var responseJson = JSON.parse(response.body);
+      console.log(responseJson);
+
+      var accessToken = responseJson.access_token;
+
+      console.log("Token: " + accessToken);
+
+      resolve(accessToken);
+
+    });
+
+  });
 }
