@@ -1,7 +1,7 @@
 openapi: 3.0.2
 info:
   title: IBM generateContent - OpenAPI 3.0
-  description: "API into Watsonx Generative AI \n\nSome useful links:\n- [The watsonAiAgent\
+  description: "This is a code engine API into the Watsonx Generative AI service \n\n Git Repo:\n- [The watsonAiAgent\
     \ repository](https://github.com/ncrowther/watsonai_agent)"
   termsOfService: http://IBM.io/terms/
   contact:
@@ -28,7 +28,7 @@ externalDocs:
   description: Find out more about IBM
   url: http://IBM.io
 servers:
-- url: https://genaiservice.1apbmbk49s5e.eu-gb.codeengine.appdomain.cloud
+- url: https://genaiservice.1fc3gg6j1yh7.eu-gb.codeengine.appdomain.cloud
 security:
 - basic_auth: []
 tags:
@@ -54,7 +54,7 @@ paths:
         explode: true
         schema:
           type: string
-          default: ca8443f9-aca2-4027-bc10-254f27728b3f
+          default: 902e9bda-956c-46af-ad1f-e6aeaaadd283
       - name: apiKey
         in: query
         description: Api Key
@@ -63,7 +63,7 @@ paths:
         explode: true
         schema:
           type: string
-          default: fXezY_fQCeEqKk2BaOHN4Hg353Bv_OD-1akrGvNxK-wh
+          default: pXlFhgkg_wfJu2jvLrkNvboGEX4P0hyAX5vm4l8ulSda
       - name: min_new_tokens
         in: query
         description: min length of generated text

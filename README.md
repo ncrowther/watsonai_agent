@@ -32,9 +32,17 @@ This project leverages the mega-awesome [swagger-tools](https://github.com/apige
 
     ibmcloud target -g default
 
+    For police POC use: 
+    
+    ibmcloud target -g asc_watsonx
+
 4.	Select the code engine project (NTC):  
 
     ibmcloud ce project select -n [PROJECT_NAME]
+
+    For police POC use: 
+
+    ibmcloud ce project select --id 7dcbef07-1828-4a4c-a211-56d9e2d14613
 
 5.	Start Rancher or Docker Desktop
 
@@ -50,7 +58,7 @@ This project leverages the mega-awesome [swagger-tools](https://github.com/apige
 
 ./CErun
 
-10.	Open the URL using the IBM Cloud Code Engine route for the refunds application
+10.	Open the URL using the IBM Cloud Code Engine route for the application
 
 
 ## License
