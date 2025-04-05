@@ -1,17 +1,13 @@
 openapi: 3.0.2
 info:
-  title: IBM generateContent - OpenAPI 3.0
-  description: "This is a code engine API into the Watsonx Generative AI service \n\n Git Repo:\n- [The watsonAiAgent\
+  title: IBM Client Engineering watsonx API facade
+  description: "Simplified API facade into the IBM Watsonx service.  Compatible with Watsonx Orchestrate. \n\n Git Repo:\n- [The watsonAiAgent\
     \ repository](https://github.com/ncrowther/watsonai_agent)"
-  termsOfService: http://IBM.io/terms/
   contact:
-    email: apiteam@IBM.io
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
+    email: ncrowther@uk.ibm.com
   version: 1.0.15
   x-ibm-annotations: "true"
-  x-ibm-application-name: Watson generative AI Service
+  x-ibm-application-name: Watson AI Service
   x-ibm-application-id: -watsonAIgenerative-AI-service
   x-ibm-skill-type: imported
   x-ibm-application-icon: "<svg width=\"19\" height=\"20\" xmlns=\"http://www.w3.org/2000/svg\"\
@@ -25,8 +21,8 @@ info:
     \ -370)\"><g clip-path=\"url(#clip2)\"><use width=\"100%\" height=\"100%\" xlink:href=\"\
     #img1\" opacity=\"1\" transform=\"matrix(0.463415 0 0 0.47619 7 370)\"></use></g></g></svg>"
 externalDocs:
-  description: Find out more about IBM
-  url: http://IBM.io
+  description: Find out more about IBM Watsonx
+  url: https://www.ibm.com/watsonx
 servers:
 - url: https://genaiservice.1fc3gg6j1yh7.eu-gb.codeengine.appdomain.cloud
 security:
